@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link href="bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="icons-1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="manifest" href="manifest.json">
+  <title>Labo2</title>
+</head>
+
+<body>
+
+  <script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+
+  <main>
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="mytoast">
+      <div class="toast-header">
+        <img src="assets/icon-192x192.png" class="rounded me-2" alt="...">
+        <strong class="me-auto">Djerba</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Hello, ça marche.
+      </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="img/djerbalogo.jpg" alt="djerbalogo" height="60"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Djerba la douce</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">À propos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Découverte
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Auto</a></li>
+                <li><a class="dropdown-item" href="#">Moto</a></li>
+                <li><a class="dropdown-item" href="#">Bateau</a></li>
+              </ul>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Rechercher</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid bg-dark text-white text-center py-5">
+      <div class="row">
+        <h2>
+          «&nbsp;je ne sais pas parler de la mer. Tout ce que je sais c'est qu'elle me débarrasse soudain de toutes mes
+          obligations. Chaque fois que je la regarde, je deviens un noyé heureux.&nbsp;»
+        </h2>
+        <h2><strong>Romain&nbsp;Gary</strong></h2>
+        <p>
+          Artiste,&nbsp;écrivain, (1914&nbsp;-&nbsp;1980)
+        </p>
+      </div>
+    </div>
+    <div class="container col-xl-12 col-xxl-12 px-6 py-5">
+      <div class="row row-cols-1 row-cols-md-3 g-3">
+        <div class="col-lg-4 col-md-12">
+          <div class="card text-center">
+            <img src="img/architecture.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title"><strong>Le houch djerbien</strong></h3>
+              <p class="card-text">Le houch dans le dialecte djerbien veut dire la maison en français. En général, le
+                houch djerbien, de forme carrée ou rectangulaire, de couleur blanche pour les murs et les toits, le bleu
+                ciel ou plus vert bouteille pour les portes et fenêtres.</p>
+              <a href="#" class="btn btn-primary">Détails</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <div class="card text-center">
+            <img src="img/plage.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title"><strong>L'île de Djerba</strong></h3>
+              <p class="card-text">Située dans le golfe de Gabès offre à ses visiteurs la possibilité de choisir parmi
+                ses vingtaines de kilomètres de plage de sable doré.</p>
+              <a href="#" class="btn btn-primary">Détails</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <div class="card text-center">
+            <img src="img/djerbahood.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title"><strong>Djerbahood</strong></h3>
+              <p class="card-text">Djerbahood est une manifestation d'art urbain durant laquelle des artistes du monde
+                entier investissent le village tunisien d'Erriadh sur l'île de Djerba pour réaliser 250 œuvres créées
+                pour l'occasion.</p>
+              <a href="#" class="btn btn-primary">Détails</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="index.js"></script>
+
+</body>
+
+</html>

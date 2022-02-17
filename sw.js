@@ -19,59 +19,58 @@ this.addEventListener("install", function (event) {
         "img/djerbahood.jpg",
         "img/djerbalogo.jpg",
         "img/plage.jpg",
-        "page-hors-ligne.html"
+        "page-hors-ligne.html",
       ]);
     })
   );
 });
 
-this.addEventListener('activate', (e) => {
-  console.log('Sw actif');
+this.addEventListener("activate", (e) => {
+  console.log("Sw actif");
 });
 
 function cacheOrNetwork(request) {
-return fromCache(request).catch(() => fetch(request));
-};
-
-function fromCache(request) {
-return caches.open('v1').then(function (cache) {
-  return cache.match(request).then(function (matching) {
-    return matching || Promise.reject('no-match');
-  });
-});
+  return fromCache(request).catch(() => fetch(request));
 }
 
-this.addEventListener('fetch', function(event) {
-  event.respondWith(cacheOrNetwork(event.request).catch(() => 
-  fallbackVersPageHorsLigne()));
+function fromCache(request) {
+  return caches.open("v1").then(function (cache) {
+    return cache.match(request).then(function (matching) {
+      return matching || Promise.reject("no-match");
+    });
+  });
+}
+
+this.addEventListener("fetch", function (event) {
+  event.respondWith(
+    cacheOrNetwork(event.request).catch(() => fallbackVersPageHorsLigne())
+  );
 });
- 
+
 function fallbackVersPageHorsLigne() {
   return caches.match("page-hors-ligne.html");
- }
-
- 
+}
 
 // sync service worker.
-this.addEventListener('sync', function (event) {
+this.addEventListener("sync", function (event) {
   console.log("reçu : " + event);
-  if (event.tag == 'sit') {
-      console.log("Connection réétablie envoie notif si permis");
-      event.waitUntil(envoyerNotification());
+  if (event.tag == "sit") {
+    console.log("Connection réétablie envoie notif si permis");
+    event.waitUntil(envoyerNotification());
   }
 });
 
 // Connection rétablie. notification: la page est dispo.
 function envoyerNotification() {
   console.log("Notification envoyée");
-  if (Notification.permission === 'granted') {
-      var options = {
-          body: 'Page dispo',
-          requireInteraction: true
-      };
+  if (Notification.permission === "granted") {
+    var options = {
+      body: "Page dispo",
+      requireInteraction: true,
+    };
 
-      self.registration.showNotification('Connection réétabli', options);
+    self.registration.showNotification("Connection réétabli", options);
   } else {
-      console.log("Pas de notif: non permis");
+    console.log("Pas de notif: non permis");
   }
 }

@@ -7,8 +7,7 @@
     "name": "Djerba",
     "short_name": "d2022",
     "description": "app_lab2",
-    "icons": [
-        {
+    "icons": [{
             "src": "assets/icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png"

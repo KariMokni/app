@@ -7,7 +7,6 @@ this.addEventListener("install", function (event) {
         "index.html",
         "index.css",
         "index.js",
-        "index2.js",
         "assets/icon-192x192.png",
         "assets/icon-256x256.png",
         "assets/icon-384x384.png",
